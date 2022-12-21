@@ -24,11 +24,10 @@ function newNonPlayableCharacter(x, y) {
     setInterval(moveCharacter, 1)
 
     function walkEast(time) {
-        return new Promise((resolve) =>{
+        return new Promise(resolve => {
             direction = 'east'
             element.src = `./assets/red-character/east.gif`
-
-            setTimeout(()=>{
+            setTimeout(() => {
                 stop()
                 resolve()
             }, time)
@@ -36,11 +35,10 @@ function newNonPlayableCharacter(x, y) {
     }
 
     function walkNorth(time) {
-        return new Promise((resolve) =>{
+        return new Promise(resolve => {
             direction = 'north'
-            element.src = `./assets/red-character/east.gif`
-
-            setTimeout(()=>{
+            element.src = `./assets/red-character/north.gif`
+            setTimeout(() => {
                 stop()
                 resolve()
             }, time)
@@ -48,11 +46,10 @@ function newNonPlayableCharacter(x, y) {
     }
 
     function walkWest(time) {
-        return new Promise((resolve) =>{
+        return new Promise(resolve => {
             direction = 'west'
-            element.src = `./assets/red-character/east.gif`
-
-            setTimeout(()=>{
+            element.src = `./assets/red-character/west.gif`
+            setTimeout(() => {
                 stop()
                 resolve()
             }, time)
@@ -60,11 +57,10 @@ function newNonPlayableCharacter(x, y) {
     }
 
     function walkSouth(time) {
-        return new Promise((resolve) =>{
+        return new Promise(resolve => {
             direction = 'south'
-            element.src = `./assets/red-character/east.gif`
-
-            setTimeout(()=>{
+            element.src = `./assets/red-character/south.gif`
+            setTimeout(() => {
                 stop()
                 resolve()
             }, time)
@@ -75,7 +71,6 @@ function newNonPlayableCharacter(x, y) {
         direction = null
         element.src = `./assets/red-character/static.gif`
     }
-
 
     return {
         element: element,
